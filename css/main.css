@@ -144,6 +144,12 @@ h1 {
   width: 101%;
   font-family: "Ubuntu-Light";
 }
+.section-services .tabs-panel {
+  display: none;
+}
+.section-services .active-panel {
+  display: block;
+}
 .tabs-item {
   margin-bottom: 75px;
 }

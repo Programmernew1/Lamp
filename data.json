@@ -16,23 +16,23 @@
         }
      ,
 
-     "services-tabs":{
-        "web-design":{
-            "text":"sssss",
-            "img":"./img/web-nout.png"
+     "servicesTabs":{
+        "webDesign":[
+            "sssss",
+            "./img/web-nout.png"
+        ],
+        "logoDesign":[
+            "mmmmm",
+            "./img/web-nout.png"
+        ]
         }
 
-        
-     },
 
-    "test2": [
-        "o11111din",
-        "dva",
-        "tri",
-        "chetiri",
-        "piat"
-    ]
+        
 }
+
+    
+
 
 
 

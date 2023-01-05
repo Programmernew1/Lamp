@@ -24,7 +24,7 @@
           let a = `<a class="nav-link" href="${linksJson[key]}">${key}</a>`;
           arrFromJson.push(a); 
         }
-        console.log(arrFromJson);
+        // console.log(arrFromJson);
 
         // burgerLink1.innerHTML = arrFromJson[0];
         burgerLink.forEach(function(el, i) {
@@ -36,7 +36,35 @@
         
         // табы section-services начало
 
+        let allTabs = document.querySelectorAll('.tabs-panel');
+        console.log(allTabs);
+
+
+        let linksNameTabs = data.servicesTabs;
+
         
+        let testArr = [];
+        for(k in linksNameTabs){
+
+            let tt = `<p class="tabs-panel-text">${linksNameTabs[k][0]} <a href="">See more</a>  or <a href="">portfolio </a>  <img src="${linksNameTabs[k][1]}" alt=""></p>`;
+            console.log(k);
+            console.log(linksNameTabs[k][0]);
+            console.log(linksNameTabs[k][1]);
+            testArr.push(tt);
+
+        }
+        console.log(testArr);
+
+
+        allTabs.forEach(function(el,i){
+            el.innerHTML = `${testArr[i]}`;
+        });
+
+
+
+
+
+
 
         // табы section-services конец
 
@@ -104,7 +132,16 @@ for(let link of plavnScrollVseSsil){
 
 
 
+// ТАБЫ
+let tabs =  document.querySelector('.tabs');
+console.log(tabs);
 
+tabs.addEventListener('click',function(e){
+ document.querySelector('.tabs-panel').classList.toggle('active-panel');
+});
+
+
+//ТАБЫ
 
 
 //  if (menuUl.classList.contains('js-visible')){
