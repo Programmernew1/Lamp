@@ -17,16 +17,43 @@
      ,
 
      "servicesTabs":{
-        "webDesign":[
-            "sssss",
-            "./img/web-nout.png"
-        ],
-        "logoDesign":[
-            "mmmmm",
-            "./img/web-nout.png"
-        ]
+        "webDesign":{
+          "text":"sssss",
+           "img":"./img/web-nout.png",
+           "nameTabs":"web design",
+           "status":true
+        },
+        "logoDesign":{
+           "text":"mmmmm",
+            "img":"./img/web-nout.png",
+            "nameTabs":"logo design",
+            "status":false
         }
+        }
+        ,
+        "portfolioCardItem":{
+            "card-item":{
+                "h3":"subsence11 <br> monochrome11",
+                "p":"11qweWeb design in monochromatic colors for <br> SUBSENCE agency.",
+                "span":"11wqeb design"
+            },
+            "card-item2":{
+                "h3":"subsence22 <br> monochrome22",
+                "p":"22qweqweWeb design in monochromatic colors for <br> SUBSENCE agency11.",
+                "span":"22web design"
+            },
+            "card-item3":{
+                "h3":"subsence33 <br> monochrome33",
+                "p":"33qqqqqWeb design in monochromatic colors for <br> SUBSENCE agency22.",
+                "span":"33web design"
+            },
+            "card-item4":{
+                "h3":"subsence44 <br> monochrome44",
+                "p":"44Web qwqeqqwe design in monochromatic colors for <br> SUBSENCE agency33.",
+                "span":"44web design"
+            }
 
+        }
 
         
 }

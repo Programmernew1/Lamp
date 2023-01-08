@@ -144,11 +144,19 @@ h1 {
   width: 101%;
   font-family: "Ubuntu-Light";
 }
+.section-services {
+  min-height: 600px;
+}
 .section-services .tabs-panel {
   display: none;
 }
 .section-services .active-panel {
   display: block;
+}
+.section-services .active-tab {
+  font-size: 60px;
+  color: #b69b67;
+  border-top: 1px solid #b69b67;
 }
 .tabs-item {
   margin-bottom: 75px;
@@ -158,11 +166,6 @@ h1 {
   font-size: 30px;
   color: #b4b4b4;
   text-transform: uppercase;
-}
-.tabs-item a.active-tab {
-  font-size: 60px;
-  color: #b69b67;
-  border-top: 1px solid #b69b67;
 }
 .tabs-panel p {
   font-size: 20px;
@@ -227,6 +230,7 @@ h1 {
 .card-item-content {
   background-color: #b69b67;
   color: black;
+  width: 75%;
 }
 .card-item-content h3 {
   font-size: 30px;
@@ -352,6 +356,12 @@ a.click-for-more-link {
   display: block;
   color: #b4b4b4;
 }
+.feedbacksH2 {
+  width: max-content;
+}
+.flex {
+  display: flex;
+}
 .section-contact .wrap-item-contact {
   margin-top: 100px;
 }
@@ -391,6 +401,12 @@ footer .ul-footer li a {
   color: #b4b4b4;
   text-transform: uppercase;
 }
+footer .footer-nav {
+  display: flex;
+}
+footer .footer-nav li {
+  margin-right: 1em;
+}
 @media (min-width: 1661px) {
   .container {
     width: 1515px;
@@ -425,6 +441,18 @@ footer .ul-footer li a {
   }
 }
 @media (max-width: 1200px) {
+  .card-item-content {
+    width: inherit;
+  }
+  .card-item-content h3 {
+    font-size: 25px;
+  }
+  .card-item-content p {
+    margin-top: 10%;
+  }
+  .card-item-content p span {
+    top: 100%;
+  }
   .tabs-item a.active-tab {
     font-size: 35px;
   }
@@ -467,6 +495,9 @@ footer .ul-footer li a {
   footer .ul-footer li {
     padding-bottom: 1em;
   }
+  footer .footer-nav {
+    flex-direction: column;
+  }
 }
 @media (max-width: 1100px) {
   .portfolio-card-item:nth-child(3),
@@ -476,8 +507,20 @@ footer .ul-footer li a {
   .portfolio-card-wrap {
     flex-wrap: wrap;
   }
+  .card-item-content {
+    width: 350px;
+  }
+  .portfolio-card-item:nth-child(1) {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 992px) {
+  .card-item-content {
+    width: 60%;
+  }
+  .portfolio-card-item {
+    width: 500px;
+  }
   .tabs-item a.active-tab {
     font-size: 22px;
   }
@@ -648,6 +691,9 @@ footer .ul-footer li a {
   }
 }
 @media (max-width: 458px) {
+  .card-item-content h3 {
+    font-size: 22px;
+  }
   h1 {
     font-size: 25px;
     width: 80%;

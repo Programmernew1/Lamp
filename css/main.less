@@ -233,13 +233,20 @@ h2{
 
 
 .section-services{
-
+    min-height: 600px;
     .tabs-panel{
         display: none;
     }
 
     .active-panel{
         display: block;
+    }
+
+    .active-tab{
+        font-size: 60px;
+        color:@colorH2Braun;
+        border-top: 1px solid @colorH2Braun;
+    
     }
 }
 
@@ -253,21 +260,8 @@ h2{
     color:@colorText;
     text-transform: uppercase;
 
-
-
-
-
-
 }
-.tabs-item a.active-tab{
-    font-size: 60px;
-    color:@colorH2Braun;
-    border-top: 1px solid @colorH2Braun;
 
-
-
-
-}
 .tabs-panel p {
     font-size: 20px;
     color: @colorText;
@@ -372,6 +366,7 @@ h2{
 .card-item-content{
     background-color: #b69b67;
     color: black;
+    width: 75%;
 
     h3{
         font-size: 30px;
@@ -619,7 +614,13 @@ a.click-for-more-link {
        
     // }
 }
+.feedbacksH2{
 
+    width: max-content;
+}
+.flex{
+    display: flex;
+}
 .section-contact{
 
     // h2{
@@ -766,7 +767,16 @@ footer{
             }
         }
     }
+
+    .footer-nav{
+        display: flex
+
+    }
+    .footer-nav li{
+        margin-right: 1em;
+    } 
 }
+
 
 @import "./media.less";
 
