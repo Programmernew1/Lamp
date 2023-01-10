@@ -1,11 +1,6 @@
 // JSON можно читать только по HTTP протоколу, чтение файла не предусмотренно в целях безопастности!!!
 
 
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function(){
 
 
@@ -114,9 +109,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         footerLinkNav.innerHTML = `${linksFromJsonText}`;
  
-
-
-
         let arrFromJson = [];
         for (let key in linksJson) {
           let a = `<a class="nav-link" href="${linksJson[key]}">${key}</a>`;
@@ -147,9 +139,9 @@ document.addEventListener('DOMContentLoaded', function(){
         for(k in linksNameTabs){
             // console.log(linksNameTabs[k].text);
 
-            let tt = `<div data-index="" class="tabs-panel"> <p class="tabs-panel-text">${linksNameTabs[k].text} <a href="">See more</a>  or <a href="">portfolio </a>  <img src="${linksNameTabs[k].img}" alt=""></p></div>`;
+            let tt = `<div id="${linksNameTabs[k].number}" class="tabs-panel"> <p class="tabs-panel-text">${linksNameTabs[k].text} <a href="#">See more</a>  or <a href="">portfolio </a>  <img src="${linksNameTabs[k].img}" alt=""></p></div>`;
             testArr += tt;
-            let tabLink = `<li class="tabs-item"><a class="tabs-item-a " href="#">${linksNameTabs[k].nameTabs}</a> </li>`;
+            let tabLink = `<li class="tabs-item"><a class="tabs-item-a " href=#${linksNameTabs[k].number}>${linksNameTabs[k].nameTabs}</a> </li>`;
             testArr2 += tabLink;
 
 
@@ -175,17 +167,21 @@ document.addEventListener('DOMContentLoaded', function(){
 
         let portfolioCardContent = "";
         for( let k in portfolioCardItem){
-            let content = `<div class="portfolio-card-item item col-lg-5"><div class="card-item-content">
+            let content = `<div  class="portfolio-card-item item col-lg-5" style="background:url('${portfolioCardItem[k].img}');" ><div class="card-item-content">
                 <h3>${portfolioCardItem[k].h3}</h3>
                 <p>${portfolioCardItem[k].p}
                     <span>${portfolioCardItem[k].span}</span>
                 </p>
             </div>
-        </div> `
-        portfolioCardContent += content; 
+          </div> `
+         portfolioCardContent += content;
+   
+           
+        
         }
 
         portfoliCardContainer.innerHTML =  portfolioCardContent;
+
 
 
 
@@ -194,21 +190,57 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
         // ТАБЫ JS начало
+        // let tabs = document.querySelector('.tabs');
+        // console.log(tabs.classList.contains('col-lg-4'));
+        // let tabsItemA = document.querySelector('.tabs-item-a');
+        // tabsItemA.classList.add('active-tab');
 
-         let tabsClickContainer = document.querySelector(".tabs");
 
-         tabsClickContainer.addEventListener("click", function(event){
-            if(event.target.classList.contains("active-tab")){
-                console.log("URA2");
-            }
-        });
 
+
+        // tabs.addEventListener("click",function(event){
+        //     if(event.target.classList.contains('active-tab')){
+        //         return;
+        //     }
+        //     else{
+        //         event.target.classList.add('active-tab');
+        //     }
+        // });
+        // console.log(linksNameTabs.staus);
+        // if(linksNameTabs.status = true && tabs.classList.contains('active-tab')){
+            
+
+
+        // }
+       let tabsitema = document.querySelectorAll('.tabs-item-a');
+       tabsitema.forEach(el => {
+        el.addEventListener('click',function(e){
+            e.preventDefault();  //убирает поведение по умолчанию
+            const id = e.target.getAttribute('href').substring(1); // убираем первый элемент у строки
+            console.log(id);
+
+            document.querySelectorAll('.tabs-item-a').forEach(el =>{
+                el.classList.remove('active-tab');
+            });
+            document.querySelectorAll('.tabs-panel').forEach(el =>{
+                el.classList.remove('active-panel');
+            });
+            el.classList.add('active-tab');
+             document.getElementById(id).classList.add('active-panel');
+             console.log(document.getElementById(id));
+        })
+       });
+
+       document.querySelector('.tabs-item-a').click(); // имитируем клик
 
 
 
 
 
         // ТАБЫ JS конец
+
+
+
       
 
 
@@ -217,10 +249,5 @@ document.addEventListener('DOMContentLoaded', function(){
 
     }
 })();
-
-
-
-
-
 
 });
