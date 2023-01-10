@@ -1,6 +1,6 @@
 {
     "test": [
-        "odin",
+        "web design",
         "dva",
         "tri",
         "chetiri",
@@ -8,8 +8,8 @@
     ],
 
         "burgerLinks": {
-            "undercover1":"#undercover",
-            "services1":"#services",
+            "undercover":"#undercover",
+            "services":"#services",
             "portfolio":"#portfolio",
             "feedbacks":"#feedbacks",
             "contacts":"#contacts"
@@ -18,17 +18,42 @@
 
      "servicesTabs":{
         "webDesign":{
-          "text":"sssss",
+          "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
            "img":"./img/web-nout.png",
            "nameTabs":"web design",
            "number":1
         },
         "logoDesign":{
-           "text":"mmmmm",
+           "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
             "img":"./img/web-nout.png",
             "nameTabs":"logo design",
             "number":2
+        },
+        "BRANDING":{
+            "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+             "img":"./img/web-nout.png",
+             "nameTabs":"BRANDING",
+             "number":3
+        },
+        "UI":{
+            "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+             "img":"./img/web-nout.png",
+             "nameTabs":"UI",
+             "number":4
+        },
+        "PHOTOGRAPHY":{
+            "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+             "img":"./img/web-nout.png",
+             "nameTabs":"PHOTOGRAPHY",
+             "number":5
+        },
+        "GRAPHICDESIGN":{
+            "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+             "img":"./img/web-nout.png",
+             "nameTabs":"GRAPHIC DESIGN",
+             "number":6
         }
+        
         }
         ,
         "portfolioCardItem":{
@@ -57,7 +82,25 @@
                 "img":"../img/item-4.png"
             }
 
-        }
+        },
+        "feedbacks":[
+            {
+                "text":"Working with thise guys was an astonishing expirience for me. I was pleased with theyre work.",
+                "author":"sarah robinson",
+                "img":"../img/photo-feedback-1.png"
+            },
+            {
+                "text":"Working with thise guys was an astonishing expirience for me. I was pleased with theyre work.",
+                "author":"sarah robinson",
+                "img":"../img/photo-feedback-2.png"
+            },
+            {
+                "text":"Working with thise guys was an astonishing expirience for me. I was pleased with theyre work.",
+                "author":"sarah robinson",
+                "img":"../img/photo-feedback-3.png"
+            }
+
+        ]
 
         
 }

@@ -91,12 +91,16 @@ document.addEventListener('DOMContentLoaded', function(){
         let data = await response.json(); // получаем ответ в формате JSON
         //  console.log(data.burgerLinks); 
 
-        let testArray = data.test.map((i)=> { // Перебираем полученный массив и преобразуем его элементы добавляя разметку HTML тэгов
-        //  console.log(i);
-            return `<option value="">${i}</option>`;
-        });
+        let testArray = data.servicesTabs;
+        let inputPortfolio = `<option value="">All categories</option>`;
+        for(let z in testArray){
+            let a = `<option value="">${testArray[z].nameTabs}</option>`;
+            inputPortfolio += a;
+        }
+        
+
         //   console.log(testArray);
-        selectPortfolio.innerHTML = `${testArray}`; // Перезаписываем значение тэга <select class="select" name="portfolio" id="select-portfolio"> в HTML разметке
+        selectPortfolio.innerHTML = inputPortfolio; // Перезаписываем значение тэга <select class="select" name="portfolio" id="select-portfolio"> в HTML разметке
 
       // ссылки в хедер начало
         let linksJson = data.burgerLinks;
@@ -182,8 +186,23 @@ document.addEventListener('DOMContentLoaded', function(){
 
         portfoliCardContainer.innerHTML =  portfolioCardContent;
 
+        let contentSTR = `<h2 id="feedbacks" class="feedbacksH2">feedbacks</h2>`;
+         data.feedbacks.map(function(el){
+            contentSTR +=   ` <div class="background-img" style="  background: url('${el.img}') no-repeat 72px 10px/ 100px 100px;">
+            <p> ${el.text}
+                <span class="feedback-autor">${el.author}</span>
+            </p>
+          </div> `
+        
+        });
+        document.querySelector(".containerFeedbacksJS").innerHTML = contentSTR;
+
+        // <h2 id="feedbacks" class="feedbacksH2">feedbacks</h2>
 
 
+
+
+          
 
 
         //section portfolio card json конец

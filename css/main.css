@@ -202,24 +202,19 @@ h1 {
   border: 1px solid ;
   height: 60px;
   margin-bottom: 86px;
+  text-transform: lowercase;
 }
 .portfolio-card-item {
   padding: 0;
   height: 270px;
   display: flex;
   justify-content: flex-end;
-  background: url("../img/item-1.png");
   margin-right: 30px;
 }
-.portfolio-card-item:nth-child(2) {
-  background: url("../img/item-2.png");
-}
 .portfolio-card-item:nth-child(3) {
-  background: url("../img/item-3.png");
   margin-top: 30px;
 }
 .portfolio-card-item:nth-child(4) {
-  background: url("../img/item-4.png");
   margin-top: 30px;
 }
 .portfolio-card-wrap {
@@ -289,15 +284,6 @@ h1 {
   border-bottom: 2px solid #b69b67;
 }
 .section-feedbacks .background-img {
-  background: url("../img/photo-feedback-1.png") no-repeat 72px 10px;
-  background-size: 100px 100px ;
-}
-.section-feedbacks .background-img:nth-child(2) {
-  background: url("../img/photo-feedback-2.png") no-repeat 72px 10px;
-  background-size: 100px 100px ;
-}
-.section-feedbacks .background-img:nth-child(3) {
-  background: url("../img/photo-feedback-3.png") no-repeat 72px 10px;
   background-size: 100px 100px ;
 }
 .section-feedbacks .feedback-autor {
