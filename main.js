@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
 /*меню открытие и закрытие начало */
 
 
- let header_1 = document.querySelector('.header-container');
+ let header_1 = document.querySelector('.burger-menu-wrap');
  let menuUl = document.querySelector('.burger-menu-ul');
  let nav = document.querySelector('.nav');
 //  header_1.addEventListener('click', event =>{
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){
         menuUl.classList.toggle('js-visible');
         return;
     }
+
 },true);
 
 
@@ -83,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let portfoliCardContainer = document.querySelector('.portfolio-card-wrap');
     let selectPortfolio = document.getElementById('select-portfolio');
     let burgerLink = document.querySelectorAll(".nav-link");
+    let burgerLinkLaptop = document.querySelectorAll(".nav-link-laptop");
+    console.log(burgerLink);
     let footerLinkNav = document.querySelector(".footer-nav");
     let tabsContainer = document.querySelector('.tabs');
     let response = await fetch('data.json');
@@ -107,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function(){
         let linksFromJsonText = "";
         for(let j in linksJson){
             let a = `<li><a class="nav-link" href="${linksJson[j]}">${j}</a></li>`;
-
-
             linksFromJsonText += a;
         }
         footerLinkNav.innerHTML = `${linksFromJsonText}`;
@@ -123,7 +124,11 @@ document.addEventListener('DOMContentLoaded', function(){
         // burgerLink1.innerHTML = arrFromJson[0];
         burgerLink.forEach(function(el, i) {
            el.innerHTML = `${arrFromJson[i]}`;
+        });
+        burgerLinkLaptop.forEach(function(el,i){
+            el.innerHTML = `${arrFromJson[i]}`;
         })
+
 
 
         // ссылки в хедер конец
