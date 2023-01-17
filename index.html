@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лампа</title>
+    <link rel="stylesheet" href="./library/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./library/bootstrap.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body class="body_1">
+<body class="body_1 ">
     <header class="container header-container">
         <nav class="nav">
             <div class="burger-menu-wrap">
@@ -20,20 +21,26 @@
                 </div>
                 <ul class="burger-menu-ul">
                     <img class="img-close-menu" src="./img/menu-close.png" alt="">
-                    <li><a class="nav-link" href="#undercover">undercover</a></li>
+                    <!-- <li><a class="nav-link" href="#undercover">undercover</a></li>
                     <li><a class="nav-link" href="#services">services</a></li>
                     <li><a class="nav-link" href="#portfolio">portfolio</a></li>
                     <li><a class="nav-link" href="#feedbacks">feedbacks</a></li>
-                    <li><a class="nav-link" href="#contacts">contacts</a></li>
+                    <li><a class="nav-link" href="#contacts">contacts</a></li> -->
                 </ul>
             </div>
             <ul class="burger-menu-ul-laptop">
-                <li><a class="nav-link-laptop" href="#undercover">undercover</a></li>
+                <!-- <li><a class="nav-link-laptop" href="#undercover">undercover</a></li>
                 <li><a class="nav-link-laptop" href="#services">services</a></li>
                 <li><a class="nav-link-laptop" href="#portfolio">portfolio</a></li>
                 <li><a class="nav-link-laptop" href="#feedbacks">feedbacks</a></li>
-                <li><a class="nav-link-laptop" href="#contacts">contacts</a></li>
+                <li><a class="nav-link-laptop" href="#contacts">contacts</a></li> -->
             </ul>
+            <div class="social-wrap"> 
+                <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="search-button">Search</div>
         </nav>
 
         
@@ -246,14 +253,15 @@
             </div>
             <div class="row">
                 <p class="p-contact col-lg-12">this is the place where sparkles of idea turns into fire</p>
+                <img class="img-idea" src="./img/png-transparent-flame-fire-flame-fireball.png" alt="">
             </div>
         </div>
         
     </main>
     <footer>
         <div class="container">
-            <div class="row">
-                <!-- <ul class="ul-footer xs-auto">
+             <!-- <div class="row wrappper">
+                 <ul class="ul-footer xs-auto">
                     <li><a href="#">services</a></li>
                     <li><a href="#">portfolio</a></li>
                     <li><a href="#">feedbacks</a></li>
@@ -266,9 +274,9 @@
                     <li><a href="#">sign up</a></li>
                     <li><a href="#">sign in</a></li>
                     <li><a href="#">search</a></li>
-                </ul> -->
-                <ul class="ul-footer xs-auto">
-                    <li>
+                </ul> 
+                 <ul class="ul-footer xs-auto">
+                    <li class="link-wrap-footer">
                         <ul class="footer-nav">
                             <li><a href="#">services</a></li>
                             <li><a href="#">portfolio</a></li>
@@ -277,19 +285,37 @@
                             <li><a href="#">contacts</a></li>
                         </ul>
                     </li>
-                    
-                    <li><a href="#">facebook </a></li>
-                    <li><a href="#">linkedin</a></li>
-                    <li><a href="#">twitter</a></li>
-                    <li><a href="#">google+ </a></li>
-                    <li><a href="#">sign up</a></li>
-                    <li><a href="#">sign in</a></li>
-                    <li><a href="#">search</a></li>
+                    <li class="social-wrap-footer">
+                        <ul>
+                            <li><a href="#">facebook </a></li>
+                            <li><a href="#">linkedin</a></li>
+                            <li><a href="#">twitter</a></li>
+                            <li><a href="#">google+ </a></li>
+                        </ul>
+                    </li>
+
+                </ul> 
+            </div>  -->
+
+
+            <div class="footer-wrap">
+                <ul class="footer-nav">
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">feedbacks</a></li>
+                    <li><a href="#">contact us</a></li>
+                    <li><a href="#">contacts</a></li>
+                </ul>
+                <ul class="social-nav">
+                    <li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i> </a></li>
+                    <li><a href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                    <!-- <li><a href="#">google+ </a></li> -->
                 </ul>
             </div>
-
         </div>
     </footer>
+
     <script src="./library/jquery.min.js"></script>
     <script src="./library/bootstrap.min.js"></script>
     <script src="./main.js"></script>

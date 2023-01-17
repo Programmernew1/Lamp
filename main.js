@@ -83,9 +83,8 @@ document.addEventListener('DOMContentLoaded', function(){
 (async () => {
     let portfoliCardContainer = document.querySelector('.portfolio-card-wrap');
     let selectPortfolio = document.getElementById('select-portfolio');
-    let burgerLink = document.querySelectorAll(".nav-link");
-    let burgerLinkLaptop = document.querySelectorAll(".nav-link-laptop");
-    console.log(burgerLink);
+    let burgerLink = document.querySelector(".burger-menu-ul");
+    let burgerLinkLaptop = document.querySelector(".burger-menu-ul-laptop");
     let footerLinkNav = document.querySelector(".footer-nav");
     let tabsContainer = document.querySelector('.tabs');
     let response = await fetch('data.json');
@@ -107,27 +106,34 @@ document.addEventListener('DOMContentLoaded', function(){
 
       // ссылки в хедер начало
         let linksJson = data.burgerLinks;
-        let linksFromJsonText = "";
+        console.log(linksJson);
+        let linksFromJsonText = `<img class='img-close-menu' src='./img/menu-close.png' alt=''>`;
+        let linksFromJsonTextLaptop = "";
+ 
         for(let j in linksJson){
             let a = `<li><a class="nav-link" href="${linksJson[j]}">${j}</a></li>`;
             linksFromJsonText += a;
+            linksFromJsonTextLaptop += a;
+
         }
-        footerLinkNav.innerHTML = `${linksFromJsonText}`;
+        burgerLink.innerHTML = `${linksFromJsonText}`;
+        burgerLinkLaptop.innerHTML = `${linksFromJsonTextLaptop}`;
+        footerLinkNav.innerHTML = `${linksFromJsonTextLaptop}`;
  
-        let arrFromJson = [];
-        for (let key in linksJson) {
-          let a = `<a class="nav-link" href="${linksJson[key]}">${key}</a>`;
-          arrFromJson.push(a); 
-        }
+        //  let arrFromJson = [];
+        // for (let key in linksJson) {
+        //   let a = `<li><a class="nav-link" href="${linksJson[key]}">${key}</a></li>`;
+        //   arrFromJson.push(a); 
+        // }
         // console.log(arrFromJson);
 
         // burgerLink1.innerHTML = arrFromJson[0];
-        burgerLink.forEach(function(el, i) {
-           el.innerHTML = `${arrFromJson[i]}`;
-        });
-        burgerLinkLaptop.forEach(function(el,i){
-            el.innerHTML = `${arrFromJson[i]}`;
-        })
+        // burgerLink.forEach(function(el, i) {
+        //    el.innerHTML = `${arrFromJson[i]}`;
+        // });
+        // burgerLinkLaptop.forEach(function(el,i){
+        //     el.innerHTML = `${arrFromJson[i]}`;
+        // })
 
 
 
@@ -262,6 +268,48 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
         // ТАБЫ JS конец
+
+
+        //зацикленный текст движение начало
+
+        let arrovText = document.querySelector(".scroling-more img");
+        let arrovTextProperty = window.getComputedStyle(arrovText);   // получить css свойства элемента
+        let arrovTextPropertyValue = Number(arrovTextProperty.top.slice(0,-2)); // строку преобразуем в число 
+        console.log(arrovTextPropertyValue);
+
+
+
+        function move(){
+            function up(){
+                let z = 46;
+                
+                setTimeout(() => {
+
+                    arrovText.style.top = `${z+5}px`;
+                }, 1000);
+
+            }
+            function down(){
+                let z = 50;
+              
+                setTimeout(() => {
+                    arrovText.style.top = `${z-5}px`;
+       
+                }, 1500);  
+
+            }
+            up();
+            down();
+        }
+        // move();
+         setInterval(move,1000);
+    
+
+       
+
+   
+    //   move();
+     // зацикленный текст конец
 
 
 

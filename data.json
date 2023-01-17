@@ -1,18 +1,13 @@
 {
-    "test": [
-        "web design",
-        "dva",
-        "tri",
-        "chetiri",
-        "piat"
-    ],
 
         "burgerLinks": {
             "undercover":"#undercover",
             "services":"#services",
             "portfolio":"#portfolio",
             "feedbacks":"#feedbacks",
-            "contacts":"#contacts"
+            "contacts":"#contacts",
+            "sign in":"sign in",
+            "sign up":"sign up"
         }
      ,
 
