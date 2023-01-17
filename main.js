@@ -280,32 +280,69 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
         function move(){
-            function up(){
-                let z = 46;
+
+            let z = 41;
+            let b = false;
+            setInterval(()=>{
+                if(z>=41 && z<=50 && b == false){
+                    z++;
+                    if(z == 50){
+                        b = true;
+                    }
+
+                }else{
+                    z--;
+                    if(z == 41){
+                        b = false;
+                    }
+                   
+
+                }
+                arrovText.style.top = `${z}px`;
                 
-                setTimeout(() => {
-
-                    arrovText.style.top = `${z+5}px`;
-                }, 1000);
-
-            }
-            function down(){
-                let z = 50;
-              
-                setTimeout(() => {
-                    arrovText.style.top = `${z-5}px`;
-       
-                }, 1500);  
-
-            }
-            up();
-            down();
+            },80)
         }
-        // move();
-         setInterval(move,1000);
+         move();
+
     
 
        
+        //  scroling-more. Выбрать один символ из строки. Увеличить размер символа.Выбрать следующий и тоже увеличть.Увеличение должно происходить последовательно.
+        // зациклить эту анимацию.
+
+        let testSTR = document.querySelector(".scroling-more p").innerHTML;
+        console.log(testSTR);
+        let arrStr = [];
+        for(let s of testSTR){
+            
+            arrStr.push(`<span>${s}<\span>`);
+           if(!s.match("\\s")&& s == testSTR[2]){
+            console.log(s);
+           } 
+          
+
+        }
+        console.log(arrStr);
+        console.log(arrStr);
+         let n = document.querySelector(".scroling-more p").innerHTML = arrStr.split(',');
+        console.log(n);
+        for(let s of n){
+            
+            
+           if(!s.match("\\s")){
+            console.log(s);
+            s.style.colors = "red";
+           } 
+          
+
+        }
+        
+
+        function atimationText(el){
+
+            el.style.transition = `scale(0.6) 500ms linear`;
+        }
+     
 
    
     //   move();
